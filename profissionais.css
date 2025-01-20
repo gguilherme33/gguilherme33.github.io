@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.principal {
+    width: 40%;
+}
+
+hr {
+    width: 100%;
+    
+}
+
+html {
+    background-color: #170120;
+    
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 10%;
+    width: 100%;
+  
+    align-items: center;
+}
+nav{
+    display: flex;
+    
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+li {
+
+    padding: 20px;
+    border-radius: 300px;
+    border: gray 1px solid;
+   
+
+}
+
+ul li:hover {
+    background-color: white;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+.logo {
+    width: 20%;
+    margin-left: 0;
+}
+
+.ativado {
+    background-color: yellow;
+}
+
+.botao {
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 20px 50px 0 50px;
+   
+
+
+
+}
+/* Mobile devices (320px - 480px) */
+@media (max-width: 480px) {
+    .logo {
+        width: 25%; /* Reduz o tamanho da logo */
+    }
+
+    ul li {
+        padding: 8px 10px; /* Reduz o padding dos itens */
+        font-size: 12px; /* Diminui o tamanho da fonte */
+    }
+
+    .botao {
+        padding: 8px 10px; /* Reduz o padding do botão */
+        font-size: 12px; /* Diminui o tamanho da fonte do botão */
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .logo {
+        width: 20%; /* Ajusta a logo */
+    }
+
+    ul li {
+        padding: 10px 15px; /* Ajusta o padding */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    .botao {
+        padding: 10px 15px; /* Ajusta o botão */
+        font-size: 14px;
+    }
+}
+
+/* Small screens, laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        width: 20%;
+    }
+
+    ul li {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .botao {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Desktops, large screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .logo {
+        width: 15%;
+    }
+
+    ul li {
+        padding: 20px 25px;
+        font-size: 18px;
+    }
+
+    .botao {
+        padding: 20px 25px;
+        font-size: 18px;
+    }
+}
+
+/* Extra large screens (1201px and more) */
+@media (min-width: 1201px) {
+    .logo {
+        width: 15%;
+    }
+
+    ul li {
+        padding: 25px 30px;
+        font-size: 20px;
+    }
+
+    .botao {
+        padding: 25px 30px;
+        font-size: 20px;
+    }
+}
+
+
+
