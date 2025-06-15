@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(arraias){
+            let soma=0;
+            for(let i=0;i<arraias.length;i++){
+                soma+=arraias[i];
+            }
+            return soma
+ }
+
+ function sumOdds(arraias){
+    let soma=0;
+    for(let i=0;i<arraias.length;i++){
+              
+ if(arraias[i]%2!=0){soma+=arraias[i];}
+           
+}
+            return soma
+ }
+
+ function product(arraias){
+     let produto=1;
+            for(let i=0;i<arraias.length;i++){
+                produto*=arraias[i];
+            }
+            return produto
+ }  
+        const a=[1,2,3,5,6,4];
+        console.log(product(a));
+    </script>
+</body>
+</html>

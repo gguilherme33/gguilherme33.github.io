@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function roma(num){
+            let resp="";
+            if(num>0){
+                while(num>=1000){
+                    
+                        num-=1000;
+                        resp+="M";
+                    
+                }
+                while(num>=500){
+                  
+                        num-=500;
+                        resp+="D";
+                    
+                }
+                while(num>=100){
+                    
+                        num-=100;
+                        resp+="C";
+                   
+                }
+                while(num>=50){
+                    
+                        num-=50;
+                        resp+="L";
+                    
+                }
+                while(num>=10){
+                   
+                        num-=10;
+                        resp+="X";
+                   
+                }
+                while(num>=5){
+                  
+                        num-=5;
+                        resp+="V";
+                }
+                while(num>=1){
+                          num-=1;
+                        resp+="I";
+                   }
+                
+            }
+       return resp }
+       console.log(roma(1));
+    </script>
+</body>
+</html>
