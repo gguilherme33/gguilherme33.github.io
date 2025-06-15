@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computador de Bordo</title>
+</head>
+<body>
+    <form id="formulario">
+        <button type="submit" id="enviar">simular</button>
+    </form>
+ <table border="1" id="tabela">
+    <tr>
+        <td>Face</td>
+        <td>Ocorrencias</td>
+        <td>Frequencia</td>
+    </tr>
+ </table>
+    <script>
+        const form = document.getElementById("formulario");
+        const tabela = document.getElementById("tabela");
+
+    
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+         
+            let s=[1,2,3,4,5,6];
+            let o=[0,0,0,0,0,0];
+            let i=0;
+            while(i<=1000000){
+               let r=s[Math.trunc(Math.random()*s.length)];
+               o[r-1]+=1;
+               i+=1;
+            } 
+            while (tabela.rows.length > 1) {
+        tabela.deleteRow(1);
+      }
+         let q=0;
+            while(q< s.length) {
+        let linha = tabela.insertRow();
+        let cell1 = linha.insertCell(0);
+        let cell2 = linha.insertCell(1);
+        let cell3 = linha.insertCell(2);
+
+        cell1.innerText = s[q];
+        cell2.innerText = o[q];
+        cell3.innerText = ((o[q] / 1000000) * 100).toFixed(2);
+        q+=1;
+      }
+
+            
+        });
+    </script>
+</body>
+</html>

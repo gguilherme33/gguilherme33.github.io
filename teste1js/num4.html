@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Inversor de Nomes</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Inversor de Nomes</h2>
+    
+    <label for="nome">Digite um nome:</label><br>
+    <input type="text" id="nome" placeholder="Ex: Ana"><br>
+    <button onclick="adicionarNome()">Adicionar nome</button>
+    
+    <h3>Lista de Nomes Digitados:</h3>
+    <ul id="listaNomes"></ul>
+
+    <button onclick="inverterNomes()">Inverter</button>
+
+    <h3>Lista de Nomes Invertidos:</h3>
+    <ul id="listaInvertida"></ul>
+  </div>
+
+  <script>
+    const nomes = [];
+
+    function adicionarNome() {
+      const nomeInput = document.getElementById("nome");
+      const nome = nomeInput.value.trim();
+
+      if (nome !== "") {
+        nomes.push(nome);
+        atualizarListaOriginal();
+        nomeInput.value = "";
+        nomeInput.focus();
+      }
+    }
+
+    function atualizarListaOriginal() {
+      const ul = document.getElementById("listaNomes");
+      ul.innerHTML = "";
+      nomes.forEach(nome => {
+        const li = document.createElement("li");
+        li.textContent = nome;
+        ul.appendChild(li);
+      });
+    }
+
+    function inverterNomes() {
+      const ul = document.getElementById("listaInvertida");
+      ul.innerHTML = "";
+      nomes.forEach(nome => {
+        const nomeInvertido = nome.split("").reverse().join("");
+        const li = document.createElement("li");
+        li.textContent = nomeInvertido;
+        ul.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>

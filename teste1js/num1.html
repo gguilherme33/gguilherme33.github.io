@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computador de Bordo</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="inf">Informe quantos R$ dispõe:</label>
+        <input type="text" id="inf" required>
+        <button type="submit" id="enviar">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        const form = document.getElementById("formulario");
+
+    
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let dinheiro = parseFloat(document.getElementById("inf").value);
+
+            let litros = dinheiro / 7;
+            let distancia = litros * 20;
+
+            document.getElementById("resultado").innerHTML =
+                `Com R$${dinheiro.toFixed(2)}, você pode comprar ${litros.toFixed(2)}
+                 litros e percorrer até ${distancia.toFixed(2)} km.`;
+        });
+    </script>
+</body>
+</html>

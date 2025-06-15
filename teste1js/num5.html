@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computador de Bordo</title>
+</head>
+<body>
+    <form id="formulario">
+        <label>Digite uma palavra</label>
+        <input type="text" id="palavra" required>
+        <button type="submit" id="enviar">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        const form = document.getElementById("formulario");
+
+    
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            let p=document.getElementById("palavra").value;
+            let i=0;
+            let r;
+            while(i<p.length){
+                if(p[i]!=p[(p.length-1)-i]){
+                   r=false;
+                    break;
+                }
+                else {r=true;}
+                i=i+1;
+
+            } 
+
+if(r==false){document.getElementById("resultado").innerHTML = "Não é um palindromo";}
+            
+if(r==true){document.getElementById("resultado").innerHTML = "É um palindromo";
+            }
+        });
+    </script>
+</body>
+</html>

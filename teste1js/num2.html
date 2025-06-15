@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computador de Bordo</title>
+</head>
+<body>
+    <form id="formulario">
+        <label">Peso(Kg):</label>
+        <input type="text" id="peso" placeholder="0.00" required>
+        <label>Altura(m):</label>
+        <input type="text" id="altura" placeholder="0.00" required>
+        <button type="submit" id="enviar">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        const form = document.getElementById("formulario");
+
+    
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            let p= parseFloat(document. getElementById("peso").value);
+            let a= parseFloat(document. getElementById("altura").value);
+            let IMC= p.toFixed(2)/(a.toFixed(2)*a.toFixed(2)).toFixed(1);
+          
+            if(IMC>=18.5 && IMC<=24.9){
+                document.getElementById("resultado").innerHTML = "com peso normal";
+            }
+            if(IMC<18.5){
+                document.getElementById("resultado").innerHTML = "abaixo do peso";
+            }
+            if(IMC>=25.0 && IMC<=29.9){
+                  document.getElementById("resultado").innerHTML = "levemente acima do peso";
+            }
+          if(IMC>=30.0 && IMC<=34.9){
+                  document.getElementById("resultado").innerHTML = "obesidade grau 1";
+          }
+          if(IMC>=35.0 && IMC<=39.9){
+                  document.getElementById("resultado").innerHTML = "obesidade grau 2(severa)" ;
+          }
+          if(IMC>=40.0){
+                  document.getElementById("resultado").innerHTML = "obesidade grau 3(morbida)" ;
+          }
+          
+
+            
+        });
+    </script>
+</body>
+</html>
